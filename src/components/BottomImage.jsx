@@ -31,7 +31,7 @@ img{
 }
 .text-over-image{
   position:relative;
-  margin-top:-40%;
+  margin-top:-30%;
   text-align:center;
 
 }
@@ -45,9 +45,9 @@ p{
 }
 
 button {
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   cursor: pointer;
-  border-radius: 1rem;
+  border-radius: 3rem;
   border: none;
   color: #fff;
   background-color: #000;

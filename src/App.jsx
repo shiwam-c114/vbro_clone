@@ -15,7 +15,7 @@ import Services from "./components/Services";
 import MultiCarousel2 from "./components/MultiCarousel2";
 import MultiCarousel3 from "./components/MultiCarousel3";
 import BottomImage from "./components/BottomImage";
-import Footer from "./components/Footer/Footer"
+
 
 
 
@@ -63,7 +63,7 @@ export default function App() {
       <MultiCarousel2/>
       <MultiCarousel3/>
       <BottomImage/>
-      <Footer/>
+      
     
       
     </div>
