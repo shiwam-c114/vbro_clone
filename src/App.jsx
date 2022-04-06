@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar";
 import  BelowSearch from "./components/BelowSearch";
 // import GetInspiredfamily from "./components/GetInspiredfamily";
 import Getfamily from "./components/try/getfamily";
+import SearchRessultPage from "./components/SearchResultPage";
 export default function App() {
   useEffect(() => {
     // const sr = scrollreveal({
@@ -39,6 +40,7 @@ export default function App() {
       <Navbar />
       <Hero />
       < BelowSearch/>
+      {/* <SearchRessultPage /> */}
       {/* <GetInspiredfamily/> */}
       <Getfamily/>
       {/* <Services /> */}
