@@ -1,7 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 export default function Hero() {
+
+  const [cities, setCities] = useState([])
+  const [place, setPlace] = useState("")
+  const [showRes, setShowRes] = useState(true)
+
+  async function lookup(e) {
+    setShowRes(true)
+    setPlace(e.target.value)
+    const url = `https://test-fake-server-0.herokuapp.com/locations?q=`
+    let res = await fetch(url + e.target.value);
+    let data = await res.json()
+    console.log(e.target.value, data, "this is the data and the input val");
+    let arr = []
+    for (let i = 0; i < 10; i++) {
+      if (data[i]) {
+        arr.push(data[i])
+      }
+    }
+    setCities([...arr])
+    console.log(cities, "cites");
+  }
+
+  function selectedCity(e) {
+    setShowRes(!showRes)
+    setPlace(e.target.innerHTML)
+  }
+
+  let SearchRes = styled.div`
+  background-color: white;
+  position: absolute;
+  left: 200px;
+  top: 285px;
+  width: 280px;
+  `
+
+
+
   return (
     <Section id="hero">
       <div className="background">
@@ -14,7 +57,7 @@ export default function Hero() {
         <div className="search">
           <div className="container">
             <label htmlFor="">Where you want to go</label>
-            <input type="text" placeholder="Search Your location" />
+            <input type="text" onChange={lookup} value={place} placeholder="Search Your location" />
           </div>
           <div className="container">
             <label htmlFor="">Check-in</label>
@@ -25,8 +68,14 @@ export default function Hero() {
             <input type="date" />
           </div>
           
-          <button> <i class="material-icons">search</i>Search</button>
+         <button > <i class="material-icons">search</i>Search</button>
         </div>
+        {
+          showRes?
+        <SearchRes> {cities.map((city)=>
+        <p key= {city.id} onClick={selectedCity} >{city.city}</p>
+        )} </SearchRes>: null
+        }
       </div>
     </Section>
   );

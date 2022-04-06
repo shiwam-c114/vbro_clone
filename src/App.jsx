@@ -56,6 +56,7 @@ export default function App() {
       <Navbar />
       <Hero />
       < BelowSearch/>
+      {/* <SearchRessultPage /> */}
       {/* <GetInspiredfamily/> */}
       <Getfamily/>
       <MultiCarousel/>
