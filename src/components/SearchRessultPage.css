@@ -1,4 +1,9 @@
-*{
-    padding: 0;
-    margin: 0;
-}
+.parent{
+    display: flex;
+  }
+  .results{
+    flex: 3;
+  }
+  .map{
+    flex: 2;
+  }
