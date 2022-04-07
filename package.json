@@ -13,11 +13,6 @@
     "react-multi-carousel": "^2.8.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
-<<<<<<< HEAD
-=======
-    "react-slick": "^0.28.1",
-    "slick-carousel": "^1.8.1",
->>>>>>> main
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },

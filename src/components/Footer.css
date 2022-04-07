@@ -1,0 +1,53 @@
+.logo{
+    margin: 0 45px;
+}
+
+.main-footer{
+    display: flex;
+}
+.main-footer>div{
+    flex: 1;
+}
+.some-links{
+    display: flex;
+    justify-content:left;
+}
+.some-links>div{
+    flex: 1;
+}
+.footer-bottom{
+    display: flex;
+}
+.footer-bottom>div{
+    /* flex: 1; */
+    justify-content: space-evenly;
+}
+a{
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+}
+ul{
+    list-style-type:none;
+}
+strong{
+    color: #245abc;
+}
+.btn{
+    border-radius: 100px;
+    background-color: #245abc;
+    border-color: #245abc;
+    color: #fff;
+    box-shadow: none;
+    padding: 16px 32px;
+    font-size: 1rem;
+    line-height: 24px;
+}
+
+input{
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+}
+ .expedia-group{
+    color: #000099;
+ }

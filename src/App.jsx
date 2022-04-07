@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 // import Recommend from "./components/Recommend";
@@ -9,12 +9,14 @@ import Navbar from "./components/Navbar";
 // import scrollreveal from "scrollreveal";
 import  BelowSearch from "./components/BelowSearch";
 // import GetInspiredfamily from "./components/GetInspiredfamily";
-import Getfamily from "./components/try/getfamily";
-import MultiCarousel from "./components/MultiCarousel";
-import Services from "./components/Services";
-import MultiCarousel2 from "./components/MultiCarousel2";
-import MultiCarousel3 from "./components/MultiCarousel3";
-import BottomImage from "./components/BottomImage";
+// import Getfamily from "./components/try/getfamily";
+// import MultiCarousel from "./components/MultiCarousel";
+// import Services from "./components/Services";
+// import MultiCarousel2 from "./components/MultiCarousel2";
+// import MultiCarousel3 from "./components/MultiCarousel3";
+// import BottomImage from "./components/BottomImage";
+// import SearchResultPage from "./components/SearchResultPage"
+// import Footer from "./components/Footer";
 
 
 
@@ -56,14 +58,15 @@ export default function App() {
       <Navbar />
       <Hero />
       < BelowSearch/>
-      {/* <SearchRessultPage /> */}
+      {/* <SearchResultPage /> */}
       {/* <GetInspiredfamily/> */}
-      <Getfamily/>
-      <MultiCarousel/>
-      <Services/>
-      <MultiCarousel2/>
-      <MultiCarousel3/>
-      <BottomImage/>
+      {/* <Getfamily/> */}
+      {/* <MultiCarousel/> */}
+      {/* <Services/> */}
+      {/* <MultiCarousel2/> */}
+      {/* <MultiCarousel3/> */}
+      {/* <BottomImage/> */}
+      <Footer />
       
     
       

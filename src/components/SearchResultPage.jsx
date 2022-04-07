@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './SearchRessultPage.css';
+import './SearchResultPage.css';
 import Card from './common/Card';
 
 function SearchRessultPage() {
