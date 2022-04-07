@@ -10,7 +10,23 @@ import Navbar from "./components/Navbar";
 import  BelowSearch from "./components/BelowSearch";
 // import GetInspiredfamily from "./components/GetInspiredfamily";
 import Getfamily from "./components/try/getfamily";
-import SearchRessultPage from "./components/SearchResultPage";
+import MultiCarousel from "./components/MultiCarousel";
+import Services from "./components/Services";
+import MultiCarousel2 from "./components/MultiCarousel2";
+import MultiCarousel3 from "./components/MultiCarousel3";
+import BottomImage from "./components/BottomImage";
+
+
+
+
+
+
+
+
+
+
+
+
 export default function App() {
   useEffect(() => {
     // const sr = scrollreveal({
@@ -43,10 +59,14 @@ export default function App() {
       {/* <SearchRessultPage /> */}
       {/* <GetInspiredfamily/> */}
       <Getfamily/>
-      {/* <Services /> */}
-      {/* <Recommend /> */}
-      {/* <Testimonials />
-      <Footer /> */}
+      <MultiCarousel/>
+      <Services/>
+      <MultiCarousel2/>
+      <MultiCarousel3/>
+      <BottomImage/>
+      
+    
+      
     </div>
   );
 }
