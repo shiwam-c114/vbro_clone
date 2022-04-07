@@ -122,6 +122,8 @@ const Section = styled.section`
     }
     .search {
       display: flex;
+    
+   
       background-color: #ffffffce;
       padding: 0.5rem;
       border-radius: 0.5rem;
