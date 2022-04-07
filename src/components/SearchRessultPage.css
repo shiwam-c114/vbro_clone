@@ -1,0 +1,9 @@
+.parent{
+    display: flex;
+  }
+  .results{
+    flex: 3;
+  }
+  .map{
+    flex: 2;
+  }
