@@ -2,11 +2,7 @@ import React, { useEffect } from "react";
 // import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-// import Recommend from "./components/Recommend";
-// import ScrollToTop from "./components/ScrollToTop";
-// import Services from "./components/Services";
-// import Testimonials from "./components/Testimonials";
-// import scrollreveal from "scrollreveal";
+
 import  BelowSearch from "./components/BelowSearch";
 // import GetInspiredfamily from "./components/GetInspiredfamily";
 import Getfamily from "./components/try/getfamily";
@@ -15,8 +11,13 @@ import Services from "./components/Services";
 import MultiCarousel2 from "./components/MultiCarousel2";
 import MultiCarousel3 from "./components/MultiCarousel3";
 import BottomImage from "./components/BottomImage";
+import Checkout from "./components/checkout/Checkout";
 
-
+import { Route } from 'react-router-dom'
+import CheckOut2 from "./components/checkout/CheckOut2";
+import CheckOut3 from "./components/checkout/CheckOut3";
+import Static from "./components/checkout/Static";
+import CheckOutmain from "./components/checkout/CheckOutmain";
 
 
 
@@ -52,21 +53,22 @@ export default function App() {
   }, []);
   return (
     <div>
-      {/* <ScrollToTop /> */}
-      <Navbar />
+     
+      {/* <Navbar />
       <Hero />
       < BelowSearch/>
-      {/* <SearchRessultPage /> */}
-      {/* <GetInspiredfamily/> */}
+    
       <Getfamily/>
       <MultiCarousel/>
       <Services/>
       <MultiCarousel2/>
       <MultiCarousel3/>
-      <BottomImage/>
-      
-    
-      
+      <BottomImage/> */}
+     {/* <Checkout/> */}
+    {/* <CheckOut2/> */}
+    {/* <CheckOut3/> */}
+    {/* <Static/> */}
+      <CheckOutmain/>
     </div>
   );
 }
