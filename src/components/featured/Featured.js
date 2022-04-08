@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link}  from 'react-router-dom'
 
 import './Featured.css'
 
@@ -52,7 +53,7 @@ const Featured = () => {
                 </div>
                 <div className='span-2 right-img-details'>
                     <p>A beautiful modern day home in the city with a full-size pool. Spacious and luxurious home located in Texas. Including media room, workout facility, and built-in sauna. </p>
-                    <button className='btn'>View Listing</button>
+                    <Link to={"/FirstStep"}><button className='btn'>Book Now</button></Link>
                 </div>
             </div>
 
@@ -69,7 +70,7 @@ const Featured = () => {
 
                 <div className='span-2 right-img-details order-7'>
                     <p>A beautiful modern day home in the city with a full-size pool. Spacious and luxurious home located in Texas. Including media room, workout facility, and built-in sauna. </p>
-                    <button className='btn'>View Listing</button>
+                    <Link to={"/FirstStep"}><button className='btn'>Book Now</button></Link>
                 </div>
 
 

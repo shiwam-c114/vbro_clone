@@ -1,0 +1,147 @@
+/* Thirdbooknow styles */
+/* .main{
+    position: -webkit-sticky;
+    position: sticky;
+    top:0px;
+    left:0px;
+    bottom: 49%;
+    height:50px;
+    background-color: white;
+}
+.main hr{
+width: 73%;
+margin-left: 0%;
+margin-bottom: 0%;
+}
+.main ul {
+  list-style-type: none;
+}
+
+.main li {
+  display: inline;
+  margin-left: 1%;
+  color:rgb(102, 100, 100);
+  font-size: larger;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main li:hover{
+    color:black;
+    text-decoration: underline;
+}
+.about{
+  margin-left: 1%;
+  color:rgb(51, 50, 50);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+.about #heading{
+    font-size: larger;
+}
+.about p{
+ width:max-content;
+ height:fit-content;
+ margin-bottom: 3%;
+}
+.amenities{
+  margin-left: 1%;
+  color:rgb(51, 50, 50);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.amenities ul{
+    display: grid;
+    grid-template-columns:repeat(3,300px);
+    grid-template-rows:repeat(3,50px);
+}
+.amenities li img{
+  height: 20px;
+}
+
+.right-section{
+    float: right;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0px;
+    right:0px;
+    bottom: 49%;
+    border: 2px solid rgb(218, 212, 212);
+} */
+
+/* Signup.jsx */
+
+.previous {
+  color: black;
+  border-radius: 30%;
+  font-size: 500%;
+  text-decoration: none;
+}
+.upperPortion #logo{
+   margin-left: 40%;
+}
+.upperPortion hr{
+    margin: 0%;
+}
+.main-Sec{
+    margin-left: 35%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.main-Sec input,p,h1{
+    width:400px;
+    height:50px;
+    margin: 1%;
+    text-align: start;
+}
+.main-Sec p{
+    margin-left: 5%;
+}
+.main-Sec button{
+    background-color: rgb(35, 35, 199);
+    border-radius: 1000px;
+    width:400px;
+    height:50px;
+    margin: 1%;
+    text-align: center;
+    color: white;
+    margin-left: 2%;
+    font-size: large;
+}
+.main-Sec span{
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.main-Sec #moreCenter{
+    margin-left: 14%;
+}
+.main-Sec img{
+    height: 35px;
+}
+.image-sec{
+margin-left: 14%;
+}
+.image-sec a{
+  text-decoration: none;
+}
+
+/* Signupredirect.jsx */
+
+.welcomeMessage{
+    margin-left:35%;
+    margin-top: 3%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+.welcomeMessage a{
+    color:blue;
+    margin-left: 2%;
+}
+.signout_button{
+      background-color: rgb(35, 35, 199);
+      border-radius: 1000px;
+      width:400px;
+      height:50px;
+      margin: 1%;
+      text-align: center;
+      color: white;
+      margin-left: 2%;
+      font-size: large;
+  }

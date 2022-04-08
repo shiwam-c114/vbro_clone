@@ -68,7 +68,7 @@ export default function Hero() {
             <input type="date" />
           </div>
           
-         <button > <i class="material-icons">search</i>Search</button>
+         <Link to={"Listing"}><button > <i class="material-icons">search</i>Search</button></Link>
         </div>
         {
           showRes?

@@ -1,0 +1,25 @@
+.bottom-button {
+    padding: 1rem 1rem;
+    cursor: pointer;
+    border-radius: 3rem;
+    border: none;
+    color: #fff;
+    background-color:rgba(0, 0, 0, 0.7);
+    border:1px solid #023e8a;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    margin-top:2%;
+    transition: 0.3s ease-in-out;
+}
+
+
+.bottomImage {
+    background-image: linear-gradient(rgba(90, 90, 90, 0.5),rgba(91, 91, 91, 0.5)), url("https://i.ibb.co/Rynj3Dr/1bb3a26d-9eff-45c8-815e-3890dfdd514d-hp-lyp-large.jpg");
+    background-repeat: no-repeat;
+    background-attachment: relative;  
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding: 220px 0;
+    
+  }

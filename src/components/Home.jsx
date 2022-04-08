@@ -8,7 +8,8 @@ import Services from "./Services"
 import MultiCarousel2 from './MultiCarousel2';
 import MultiCarousel3 from './MultiCarousel3';
 import BottomImage from './BottomImage';
-// import Footer from '../../Footer';
+import Footer from './Common/Footer';
+
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
        <MultiCarousel2/>
        <MultiCarousel3/>
        <BottomImage/> 
-       {/* <Footer/> */}
+       <Footer/>
 
     </div>
   )

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
@@ -9,9 +10,12 @@ export default function Navbar() {
     <>
       <Nav>
         <div className="brand">
+          <Link to={"/"}>
+
           <div className="container">
             <img src="https://csvcus.homeaway.com/rsrcs/cdn-logos/5.8.0/sitename/vrbo/web/logo.svg" alt="" />
           </div>
+          </Link>
           <div className="toggle">
             {navbarState ? (
               <VscChromeClose onClick={() => setNavbarState(false)} />
@@ -28,12 +32,12 @@ export default function Navbar() {
           </li>
           <li>
             <i class="material-icons">person_outline</i>
-            <a href="#">Log in</a>
+            <Link to={"/Login"}>Log in </Link>
     
           </li>
           <li>
              <i class="material-icons">person_add_alt</i>
-             <a href="#">Sign Up</a>
+            <Link to={"/SignUp"}>Sign Up</Link>
           </li>
           <li>
              <i class="material-icons">help_outline</i>

@@ -1,0 +1,22 @@
+container-nav{
+    display: flex;
+    height: 56px;
+    padding: 15px 16px;
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: #292929;
+    background-color: #fff;
+}
+.container-nav>input{
+margin: 0 40px 0 0 ;
+padding: 20px;
+}
+/* .search-nav{
+   
+    overflow: hidden;
+   
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+
+} */

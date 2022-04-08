@@ -1,0 +1,11 @@
+.parent{
+    display: flex;
+    margin-top: 10%;
+   
+  }
+  .results{
+    flex: 3;
+  }
+  .map{
+    flex: 2;
+  }
