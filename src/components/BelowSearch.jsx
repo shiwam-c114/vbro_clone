@@ -5,15 +5,17 @@ export default function BelowSearch(){
   return (
     
     <Container>
-        <div className='sm1'>
-            <p>
-            Vacation homes for you and whoever you call family.
-            </p>
-            <button>Discover your escape</button>
-        </div>
-        <div className='sm2'>
-            <img src='https://odis.homeaway.com/odis/destination/b07d3f2e-ed62-4b1c-aea2-07248c1e8f85.hw1.jpg' alt='img1'/> 
-        </div>
+        
+           <div className='sm1'>
+               <p>
+               Vacation homes for you and whoever you call family.
+               </p>
+               <button>Discover your escape</button>
+           </div>
+           <div className='sm2'>
+               <img src='https://odis.homeaway.com/odis/destination/b07d3f2e-ed62-4b1c-aea2-07248c1e8f85.hw1.jpg' alt='img1'/> 
+           </div>
+         
     </Container>
    
   )
@@ -61,12 +63,9 @@ button{
       border-color:#023e8a;
     }
   
-    @media screen and (min-width: 280px) and (max-width: 980px) {
+    @media screen and (min-width: 480px) and (max-width: 980px) {
        
-        .sm2{
-            width:200px;
-        }
-
+        
 
     }
       

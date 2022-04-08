@@ -117,9 +117,9 @@ const MultiCarousel2 = () => {
             slidesToSlide: 2
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1,
-            slidesToSlide: 1
+            breakpoint: { max: 300, min: 150 },
+            items: 2,
+            slidesToSlide: 2
         }
     };
     return (
@@ -127,7 +127,7 @@ const MultiCarousel2 = () => {
             <Div>
                 <div className="contentText">
                     <h3>Best places in the United States for nature</h3>
-                    {/* <Link to="/ncr/movies" className="link">See all <RiArrowRightSLine /></Link> */}
+                    
                 </div>
                 <div className="entertainment_container">
                     <Carousel responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]} autoPlay={true} >

@@ -60,4 +60,26 @@ button {
     background-color: black;
   }
 
+
+  @media screen and (max-width:720px) {
+      img{
+        width:100px;
+        height:100px;
+      }
+
+      .text-over-image{
+        position:relative;
+        margin-top:-10%;
+      }
+      p{
+        font-size:10px;
+      }
+
+      button{
+        margin-top:-30%
+      }
+     
+  }
+    
+
 `

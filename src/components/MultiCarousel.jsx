@@ -29,7 +29,7 @@ const Div = styled.div`
 `
 
 const Wrapper = styled.div`
-    width: 80%;
+    width: 100%;
     margin: 0px;
     font-family: Roboto, sans-serif;
     transition: .3s;
@@ -202,9 +202,10 @@ const MultiCarousel = () => {
             slidesToSlide: 2
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1,
-            slidesToSlide: 1
+           
+            breakpoint: { max: 300, min: 150 },
+            items: 2,
+            slidesToSlide: 2
         }
     };
     return (
@@ -212,7 +213,7 @@ const MultiCarousel = () => {
             <Div>
                 <div className="contentText">
                     <h3>Find spaces that suit your style</h3>
-                    {/* <Link to="/ncr/movies" className="link">See all <RiArrowRightSLine /></Link> */}
+                  
                 </div>
                 <div className="entertainment_container">
                     <Carousel responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]} autoPlay={true} >

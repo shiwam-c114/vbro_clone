@@ -48,4 +48,12 @@
     .span-3 {
         grid-column: span 2;
     }
+
+    .container h1{
+        font-size:20px;
+    }
+
+    .container p{
+        font-size:15px;
+    }
 }

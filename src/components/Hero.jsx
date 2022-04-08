@@ -181,7 +181,8 @@ const Section = styled.section`
     .content {
       .title {
         h1 {
-          font-size: 1rem;
+          font-size: 1.0rem;
+          margin-left:8%;
         }
         p {
           font-size: 0.8rem;

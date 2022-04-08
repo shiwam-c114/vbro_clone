@@ -49,7 +49,8 @@ const Wrapper = styled.div`
         // word-break: break-word;
 	
     }
-    
+
+   
 `
 
 const data1 = [
@@ -117,9 +118,9 @@ const MultiCarousel3 = () => {
             slidesToSlide: 2
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1,
-            slidesToSlide: 1
+            breakpoint: { max: 300, min: 150 },
+            items: 2,
+            slidesToSlide: 2
         }
     };
     return (

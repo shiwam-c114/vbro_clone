@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { Link, useHistory } from "react-router-dom";
+import Static from "./Static";
 function CheckOut2() {
   return (
+    <Vast>
     <Sec>
       <div className="py-2">
         <div className="logo1">
@@ -80,17 +83,30 @@ function CheckOut2() {
           policies and terms
         </p>
         <div className="agree-button">
-          <button>Agree & continue</button>
+        <Link to={`/ThirdStep`}><button >Agree & continue</button></Link>
         </div>
       </div>
     </Sec>
+    <div>
+      <Static/>
+    </div>
+    
+    </Vast>
   );
 }
 
 export default CheckOut2;
 
+
+const Vast = styled.div`
+  background-color: #f5f4f3;
+  display: flex;
+`;
+
 const Sec = styled.div`
   background-color: #f5f4f3;
+  
+  
 .text2{
   padding-left:5%;
   padding-top:3%;
@@ -98,7 +114,7 @@ const Sec = styled.div`
   .container {
     background-color: white;
     margin-top: 3%;
-    width: 50%;
+    width: 90%;
     margin-left: 2%;
   }
 
@@ -111,7 +127,7 @@ const Sec = styled.div`
   .policies {
     background-color: white;
     margin-top: 3%;
-    width: 50%;
+    width: 90%;
     margin-left: 2%;
   }
 
@@ -126,7 +142,7 @@ const Sec = styled.div`
 
 
   .last-part-button{
-    width:50%
+    width:90%;
 
   
 }
@@ -148,10 +164,13 @@ button{
     font-size: 0.9rem;
     letter-spacing: 0.1rem;
     transition: 0.3s ease-in-out;
-    margin-left:50%;
+    margin-left:32%;
     margin-top:5%;
     &:hover {
       background-color: #1C4695;
       border-color:#023e8a;
 }
+
 `;
+
+

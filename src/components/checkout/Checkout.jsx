@@ -3,10 +3,10 @@ import axios from "axios";
 import swal from "sweetalert";
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
-import { AuthContext } from "../../Context/AuthContext";
+
 
 function Checkout() {
-    const {movePage} = React.useContext(AuthContext)
+  
   return (
     <Div>
       <div className="py-2">
@@ -110,7 +110,7 @@ function Checkout() {
           Standard messaging rates may apply.
         </p>
         <div className="agree-button">
-          <button onClick={movePage(1)}>Agree & continue</button>
+          <Link to={`/Secondndstep`}><button >Agree & continue</button></Link>
         </div>
       </div>
     </Div>
