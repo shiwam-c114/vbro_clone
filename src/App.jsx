@@ -4,7 +4,9 @@ import CheckOut2 from "./components/checkout/CheckOut2";
 import CheckOut3 from "./components/checkout/CheckOut3";
 
 import CheckOutmain from "./components/checkout/CheckOutmain";
+import Featured from "./components/featured/Featured";
 import Home from "./components/Home";
+
 
 
 
@@ -50,6 +52,7 @@ export default function App() {
       <Route path="/FirstStep" element={<CheckOutmain />} />
       <Route path="/Secondndstep" element={<CheckOut2 />} />
       <Route path="/ThirdStep" element={<CheckOut3 />} />
+      <Route path="/ThirdPage" element={<Featured />} />
     </Routes>
        
     </div>

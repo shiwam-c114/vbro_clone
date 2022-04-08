@@ -21,7 +21,7 @@ const Home = () => {
        <Services/>
        <MultiCarousel2/>
        <MultiCarousel3/>
-       <BottomImage/>
+       <BottomImage/> 
        {/* <Footer/> */}
 
     </div>
