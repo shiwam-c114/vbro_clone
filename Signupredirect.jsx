@@ -1,5 +1,5 @@
 import React from "react";
-import {Signup} from "./Signup"
+
 
 function Signupredirect(){
     return(
@@ -10,9 +10,11 @@ function Signupredirect(){
             <hr></hr>        
         </div>
         <div className = "welcomeMessage">
-         <h2>Welcome,{document.getElementById("firstname").value} </h2>
+         <h2>Welcome<span className = "user_name"></span></h2>
          <p>With your new Vrbo account, the world is within your<br></br> reach.</p><br></br>
          <a href = "" target = '_blank'>Continue</a>
+        <p> &nbsp; &nbsp; &nbsp; &nbsp;or</p>
+         <button className = 'signout_button'>Sign Out</button>
         </div>
         </div>
         );
