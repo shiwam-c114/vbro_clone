@@ -12,7 +12,6 @@ function Thirbooknow(){
                         <li>Availability</li>
                         <li>Host</li>
                         <li>Rooms&beds</li>
-                        <li>Reviews</li>
                         <li>Map</li>
                         <li>Policies</li>
                     </ul>
@@ -43,7 +42,19 @@ Premier Host</p>
 </div>
 <div className = 'amenities'>
 <h1>Amenities</h1>
+<ul>
+    <li>Wireless Internet</li>
+    <li>TV</li>
+    <li>Air Conditioning</li>
+    <li>Fireplace</li>
+    <li>Children Welcome</li>
+    <li>Parking</li>
+    <li>No Smoking</li>
+    <li>Heater</li>
+    <li>Linens Provided</li>
+</ul>
 </div>
+<div></div>
           <div className = "right-section">
             <p><b>$ 111</b>/night</p>
             <div className="inputBox">
