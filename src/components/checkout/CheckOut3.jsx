@@ -12,27 +12,28 @@ function CheckOut3() {
   let b="";
   let c="";
   let d="";
-  let e="";
+  let h="";
   let f="";
   let g="";
   const jojo = () => {
-    console.log(x,y,z,a,b,c,d,e,f,g)
+    console.log(x,y,z,a,b,c,d,h,f,g)
     if (
-      x !== "" &&
-      y !== "" &&
-      z !== "" &&
-      a !== "" &&
-      b !== "" &&
-      c !== "" &&
-      d !== "" &&
-      e !== "" &&
-      f !== "" &&
-      g !== ""
+      x == "" ||
+      y == "" ||
+      z == "" ||
+      a == "" ||
+      b == "" ||
+      c == "" ||
+      d == "" ||
+      h == "" ||
+      f == "" ||
+      g == "" 
     ) {
-      alert("ThankYou");
-      navigate("/");
-    } else {
       alert("Field are mandatory");
+    } else {
+      alert("ThankYou For Booking");
+      navigate("/");
+     
     }
   };
 
@@ -57,8 +58,8 @@ function CheckOut3() {
   const handleChanged = (e) => {
     d = e.target.value;
   };
-  const handleChangee = (e) => {
-    e = e.target.value;
+  const handleChangeh = (e) => {
+    h = e.target.value;
   };
   const handleChangef = (e) => {
     f = e.target.value;
@@ -218,7 +219,7 @@ function CheckOut3() {
                     placeholder="City"
                     name="City"
                     className="form-control"
-                    onChange={handleChangee}
+                    onChange={handleChangeh}
                   />
                   <input
                     style={{ height: "40px", width: "25%", margin: "2px" }}

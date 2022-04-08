@@ -1,5 +1,7 @@
 .logo{
     margin: 0 45px;
+    padding:2%;
+    margin-left:-1%;
 }
 
 .main-footer{
@@ -51,4 +53,11 @@ input{
 }
  .expedia-group{
     color: #000099;
+ }
+
+ @media screen and (min-width: 280px) and (max-width: 980px) {
+  .main-footer{
+      flex-direction: column;
+  }
+
  }

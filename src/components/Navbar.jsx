@@ -76,11 +76,13 @@ export default function Navbar() {
 }
 
 const Nav = styled.nav`
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   .brand {
     .container {
+      
       cursor: pointer;
       display: flex;
       justify-content: center;

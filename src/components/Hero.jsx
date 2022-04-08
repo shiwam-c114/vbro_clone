@@ -82,10 +82,13 @@ export default function Hero() {
 }
 
 const Section = styled.section`
+
   position: relative;
   margin-top: 2rem;
   width: 100%;
   height: 100%;
+
+
   .background {
     height: 100%;
     width:100%;
@@ -201,9 +204,10 @@ const Section = styled.section`
           }
         }
         button {
-          padding: 1rem;
+          padding: 0.9rem;
           font-size: 1rem;
           border-radius: 30px;
+          margin-left:22%;
         }
         /* display: none; */
       }

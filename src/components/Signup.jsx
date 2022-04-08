@@ -2,7 +2,6 @@ import React from "react";
 // import "./Signup.css";
 
 function Signup(){
-   
     return(
         <div>
         <div className = "upperPortion">
@@ -13,10 +12,10 @@ function Signup(){
         <br></br>
         <div className="main-Sec">
             <h1>Create an account</h1>
-            <input onChange={} type="email" placeholder="Email Address"></input><br></br>
-            <input onChange={} type="text" placeholder="First Name" id = "firstname"></input><br></br>
-            <input onChange={} type="text" placeholder="Last Name"></input><br></br>
-            <input onChange={} type="password" placeholder="Password"></input><br></br>
+            <input  type="email" placeholder="Email Address"></input><br></br>
+            <input type="text" placeholder="First Name" id = "firstname"></input><br></br>
+            <input type="text" placeholder="Last Name"></input><br></br>
+            <input type="password" placeholder="Password"></input><br></br>
             <p>By creating an account, I agree to the Vrbo <a href = "https://www.vrbo.com/legal/terms-and-conditions" target="_blank">Terms and <br></br>
             Conditions</a> and <a href = "https://www.vrbo.com/legal/privacy-policy" target="_blank">Privacy Statement.</a></p>
             <button>Continue</button><br></br><br></br>
