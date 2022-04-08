@@ -11,17 +11,16 @@ function SearchResultPage() {
   getDataFrom() 
   }, [])
   
-const [i, setI] = useState(0)
+// const [i, setI] = useState(10)
   async function getDataFrom() {
     const url = `https://test-fake-server-0.herokuapp.com/infos`
     let res = await fetch(url)
     let data = await res.json();
     console.log(data);
-    let tempArr = []
-    tempArr = data.slice( 10*i, (10*i) + 10)
+    let tempArr = [];
+    tempArr = data.slice( 990, 990 + 10)
     setInfos([...tempArr])
     console.log(tempArr, infos)
-
   }
 
 

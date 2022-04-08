@@ -1,6 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 function Static () {
+
+    useEffect(() => {
+      fetchFromLocal()
+    }, [])
+    
+    const [expPrice, setExpPrice] = useState(0)
+    const [Data, setData] = useState({})
+    const [Price, setPrice] = useState(0)
+    const [Days, setDays] = useState(0)
+    function fetchFromLocal() {
+        let expprice = localStorage.getItem("estPrice")
+        expprice = JSON.parse(expprice)
+        setExpPrice(expprice)
+        let data = localStorage.getItem("bookingData")
+        data = JSON.parse(data)
+        setData({...data})
+        let price = localStorage.getItem("price")
+        price = JSON.parse(price)
+        setPrice(price)
+        let days = localStorage.getItem("days")
+        days = JSON.parse(days)
+        setDays(days)
+    }
+
   return (
     <Div>
         <div className='call'>
@@ -19,13 +43,13 @@ function Static () {
         <div className='table'>
         <div className="container">
             <label htmlFor="">Check-in</label>
-            <input type="date" />
+            <input type="date" defaultValue={Data.checkin} />
           </div>
 
           <div className="container">
             <label htmlFor="">Check-out</label>
             <input type="date"
-           
+            defaultValue={Data.checkout}
            />
           </div>
           
@@ -40,10 +64,10 @@ function Static () {
         
         <div className="content">
             <div className="content2">
-                <p>$231.48 x 27 nights</p>
+                <p>${Price} x {Days} nights</p>
             </div>
             <div className='content3'>
-                $6,250.00
+                ${expPrice}.00
             </div>
         </div>
 
@@ -53,7 +77,7 @@ function Static () {
                 <p>New Listing Discount (20%)</p>
             </div>
             <div className='content6'>
-               -$1,250.00
+               -${expPrice - (expPrice*0.2)}
             </div>
         </div>
 
@@ -92,7 +116,7 @@ function Static () {
                 <p>Total</p>
             </div>
             <div className='content18'>
-                $6,063.00
+                ${expPrice  + 364 + 499 + 200  -(expPrice - (expPrice*0.2))}
             </div>
         </div>
         </div>

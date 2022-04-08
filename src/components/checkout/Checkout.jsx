@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import swal from "sweetalert";
+
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 
@@ -10,12 +9,15 @@ function Checkout() {
   return (
     <Div>
       <div className="py-2">
+        <Link to={"/"}>
+
         <div className="logo1">
           <img
             src="https://csvcus.homeaway.com/rsrcs/cdn-logos/5.8.0/sitename/vrbo/web/logo.svg"
             alt="/"
-          />
+            />
         </div>
+            </Link>
         <div className="text2">
           <h1>Begin your booking</h1>
         </div>

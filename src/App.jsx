@@ -7,7 +7,7 @@ import CheckOutmain from "./components/checkout/CheckOutmain";
 import Featured from "./components/featured/Featured";
 import Home from "./components/Home";
 import Listing from "./components/Listing";
-import Login from "./components/Login";
+import { Login } from "./components/Login";
 import { Signup } from "./components/Signup";
 
 
@@ -26,30 +26,9 @@ import { Signup } from "./components/Signup";
 
 
 export default function App() {
-  useEffect(() => {
-    // const sr = scrollreveal({
-    //   origin: "top",
-    //   distance: "80px",
-    //   duration: 2000,
-    //   reset: true,
-    // });
-    // sr.reveal(
-    //   `
-    //     nav,
-    //     #hero,
-    //     #services,
-    //     #recommend,
-    //     #testimonials,
-    //     footer
-    //     `,
-    //   {
-    //     opacity: 0,
-    //     interval: 300,
-    //   }
-    // );
-  }, []);
   return (
     <div>
+
      <Routes>
      <Route path="/" element={<Home />} />
       <Route path="/FirstStep" element={<CheckOutmain />} />
@@ -59,8 +38,7 @@ export default function App() {
       <Route path = "/Listing" element={<Listing/>}/>
       <Route path = "/Featured" element={<Featured/>}/>
       <Route path = "/Login" element={<Login/>}/>
-      <Route path = "/SignUp" element={<Signup/>}/>
-     
+      <Route path = "/Signup" element={<Signup/>}/>
     </Routes>
        
     </div>

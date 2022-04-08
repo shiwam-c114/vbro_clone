@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {Link}  from 'react-router-dom'
 
 import './Featured.css'
@@ -14,9 +14,59 @@ import image12 from '../../images/image12.jpg'
 import image13 from '../../images/image13.jpg'
 import image14 from '../../images/image14.jpg'
 import image15 from '../../images/image15.jpg'
+import Navbar from '../Navbar'
+import Footer from '../Common/Footer'
 
 const Featured = () => {
+
+    useEffect(() => {
+      fetchingFromLocalStore()
+    }, [])
+    
+    
+    
+    const [Data, setData] = useState({})
+    const [Price, setPrice] = useState('')
+
+     async function fetchingFromLocalStore() {
+        let price =  localStorage.getItem('price')
+        let data =  localStorage.getItem("bookingData")
+        price = await JSON.parse(price)
+        data = await JSON.parse(data)
+        console.log(data)
+        setData({...data})
+        setPrice(price)
+
+    }
+    useEffect( async () => {
+        setTimeout(() => {
+            calc()     
+        }, 500);
+      }, [])
+    
+     async function calc() {
+        console.log(Data)
+        let stayi = Data.checkin
+        let stayj = Data.checkout
+        stayi= stayi.split('-')
+        stayj= stayj.split('-')
+        console.log(stayi, stayj, (stayj[1]*30) , +stayj[2],  (stayi[1]*30) + +stayi[2])
+        let stay = ((stayj[1]*30) + +stayj[2]) - ((stayi[1]*30) + +stayi[2])
+        let expval = Price * stay
+        console.log(stay)
+        setExtPrice(expval)
+        setStayDays(stay)
+        localStorage.setItem("days", stay)
+        localStorage.setItem("estPrice", expval)
+    }
+
+    const [stayDays, setStayDays] = useState(0)
+    const [extPrice, setExtPrice] = useState(0)
+
+
     return (
+        <>
+        <Navbar></Navbar>
         <div className='featured'>
             <h1 className='featured-text'>Top Featured Listings</h1>
             <p className='featured-text'>"SALT THERAPY" Come Vacation in the Emerald Waters of Destin Florida</p>
@@ -30,7 +80,7 @@ const Featured = () => {
                     <div className='top'>
                         <h2>123 Acme St. Dallas, TX</h2>
                         <p>House for Sale</p>
-                        <p className='price'>$2,677,000</p>
+                        <p className='price'>${Price}</p>
                     </div>
                     <div className='info-grid'>
                         <div>
@@ -46,7 +96,7 @@ const Featured = () => {
                                 <p className='bold'>Square Feet:</p><p>8,138</p>
                             </div>
                             <div className='info'>
-                                <p className='bold'>Est Payment:</p><p>$14,797/mo</p>
+                                <p className='bold'>Est Payment:</p><p>${extPrice}</p>
                             </div>
                         </div>
                     </div>
@@ -58,51 +108,10 @@ const Featured = () => {
             </div>
 
         {/* Section section */}
-        <div className='container'>
-                <img className='order-2' src={image12} alt='' />
-                <img className='order-3' src={image13} alt='' />
-
-                <img className='span-3 image-grid-row-2 order-1' src={image11} alt='' />
-
-
-                <img className='order-4' src={image14} alt='' />
-                <img className='order-5' src={image15} alt='' />
-
-                <div className='span-2 right-img-details order-7'>
-                    <p>A beautiful modern day home in the city with a full-size pool. Spacious and luxurious home located in Texas. Including media room, workout facility, and built-in sauna. </p>
-                    <Link to={"/FirstStep"}><button className='btn'>Book Now</button></Link>
-                </div>
-
-
-                <div className='span-3 img-details order-6'>
-                    <div className='top'>
-                        <h2>123 Acme St. Dallas, TX</h2>
-                        <p>House for Sale</p>
-                        <p className='price'>$2,677,000</p>
-                    </div>
-                    <div className='info-grid'>
-                        <div>
-                            <div className='info'>
-                                <p className='bold'>Bedrooms:</p><p>5</p>
-                            </div>
-                            <div className='info'>
-                                <p className='bold'>Bathrooms:</p><p>7</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='info'>
-                                <p className='bold'>Square Feet:</p><p>8,138</p>
-                            </div>
-                            <div className='info'>
-                                <p className='bold'>Est Payment:</p><p>$14,797/mo</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        
         </div>
-
+        <Footer></Footer>
+        </>
 
         
     )

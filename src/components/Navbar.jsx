@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -6,7 +6,25 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
+  const [uName, setUName] = useState("")
+  useEffect( async () => {
+    let user = sessionStorage.getItem("user")
+    user = await JSON.parse(user)
+    console.log(user);
+    setUName(user.fname)
+  }, [])
+ 
+  function logout() {
+    sessionStorage.removeItem("user");
+
+    setUName("")
+    console.log("inside logout")
+  }
+
+ 
+
   return (
+
     <>
       <Nav>
         <div className="brand">
@@ -31,13 +49,25 @@ export default function Navbar() {
             <a href="#">Trip Board</a>
           </li>
           <li>
+
             <i class="material-icons">person_outline</i>
-            <Link to={"/Login"}>Log in </Link>
+            {sessionStorage.getItem("user") 
+              ? 
+            <div class="dropdown">
+              <span>{uName}</span>
+              <div class="dropdown-content">
+              <p onClick={logout}>logout</p>
+              </div>
+            </div>
+            :
+            <Link to="/Login">Log in </Link>}
+            
     
           </li>
           <li>
              <i class="material-icons">person_add_alt</i>
             <Link to={"/SignUp"}>Sign Up</Link>
+             
           </li>
           <li>
              <i class="material-icons">help_outline</i>
@@ -76,6 +106,26 @@ export default function Navbar() {
 }
 
 const Nav = styled.nav`
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color:#023e8a;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
   display: flex;
   justify-content: space-between;
   align-items: center;

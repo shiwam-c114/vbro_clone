@@ -1,25 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../Context/AuthContext";
 // import "./Signup.css";
 
+const data = {
+    email:"",
+    fname:"",
+    lname:"",
+    password:""
+}
 function Signup(){
+
+    const [stateInit, setStateInit] = useState(data)
+
+    function setUser() {
+        const val = JSON.stringify(stateInit)
+        sessionStorage.setItem("user",val );
+        let personName = sessionStorage.getItem("user");
+        console.log(personName);
+    }
+
+    function handleChange(e) {
+        console.log(e.target)
+        const {name, value} = e.target
+        setStateInit( { ...stateInit, [name]: value} )
+        console.log(stateInit);
+    
+    }
    
     return(
         <div>
         <div className = "upperPortion">
             <a href="/" class="previous">&#8249;</a>
-            <a href="https://www.vrbo.com/" target="_blank" id = "logo"><img src="//csvcus.homeaway.com/rsrcs/cdn-logos/5.8.0/sitename/vrbo/web/logo.svg" alt="Vrbo"></img></a>
+          <Link to="/">
+          <img src="//csvcus.homeaway.com/rsrcs/cdn-logos/5.8.0/sitename/vrbo/web/logo.svg" alt="Vrbo"></img>
+          </Link>
             <hr></hr>        
         </div>
         <br></br>
         <div className="main-Sec">
             <h1>Create an account</h1>
-            <input onChange={} type="email" placeholder="Email Address"></input><br></br>
-            <input onChange={} type="text" placeholder="First Name" id = "firstname"></input><br></br>
-            <input onChange={} type="text" placeholder="Last Name"></input><br></br>
-            <input onChange={} type="password" placeholder="Password"></input><br></br>
+            <input onChange={handleChange} value={stateInit.email} name ="email" type="email" placeholder="Email Address"></input><br></br>
+            <input onChange={handleChange} value={stateInit.fname} name ="fname" type="text" placeholder="First Name" id = "firstname"></input><br></br>
+            <input onChange={handleChange} value={stateInit.lname} name ="lname" type="text" placeholder="Last Name"></input><br></br>
+            <input onChange={handleChange} value={stateInit.password} name ="password" type="password" placeholder="Password"></input><br></br>
             <p>By creating an account, I agree to the Vrbo <a href = "https://www.vrbo.com/legal/terms-and-conditions" target="_blank">Terms and <br></br>
             Conditions</a> and <a href = "https://www.vrbo.com/legal/privacy-policy" target="_blank">Privacy Statement.</a></p>
-            <button>Continue</button><br></br><br></br>
+            <Link to={"/"}>
+            <button onClick={setUser}>Continue</button><br></br><br></br>
+            </Link>
             <span>Already have an account? <a href = "Signin.jsx" target = "_blank">Sign in</a></span><br></br><br></br>
             <span id = "moreCenter">or continue with</span><br></br><br></br>
             <div className = 'image-sec'>
