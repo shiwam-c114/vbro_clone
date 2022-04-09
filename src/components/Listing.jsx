@@ -6,6 +6,7 @@ import SearchRessultPage from './SearchResultPage'
 const Listing = () => {
   return (
     <div>
+      
         <Navbar/>
         <SearchNav/>
        <SearchRessultPage/>

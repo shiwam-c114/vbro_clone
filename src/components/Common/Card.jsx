@@ -17,15 +17,22 @@ function Card(props) {
     flex:5;
     `
     const Rating = styled.div`
-    
     `
+    function saveState(e) {
+      let val = e.target.textContent
+      console.log(e.target.textContent, e)
+      let price = val[1] + val [2]
+      console.log(price);
 
+      localStorage.setItem("price", price)
+    }
 
   return (
     <div >
         <hr />
     <Link to={"/Featured"}>
-    <Cardbody>
+      
+    <Cardbody onClick={saveState} id={price}>
         <Img><img style={{"min-width": "100%", "border-radius":"5px"}} src={image} alt="" /></Img>
         <Detail>
             <p>apartment</p>

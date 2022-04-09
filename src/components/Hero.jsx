@@ -7,11 +7,28 @@ import {
   Link
 } from "react-router-dom";
 
+const initState = {
+  where: "",
+  checkin: "",
+  checkout: "",
+  guests: 0
+}
+
 export default function Hero() {
+  // function to manage state of booking
+  const [state, setState] = React.useState(initState)
+  function handleChange(e){
+    const {name, value} = e.target
+    console.log(name, value);
+    setState( { ...state, [name]: value} )
+  }
 
   const [cities, setCities] = useState([])
   const [place, setPlace] = useState("")
   const [showRes, setShowRes] = useState(true)
+
+
+
 
   async function lookup(e) {
     setShowRes(true)
@@ -33,6 +50,11 @@ export default function Hero() {
   function selectedCity(e) {
     setShowRes(!showRes)
     setPlace(e.target.innerHTML)
+    setState({...state, where: e.target.innerHTML })
+  }
+
+  function saveData() {
+    localStorage.setItem("bookingData", JSON.stringify(state));
   }
 
   let SearchRes = styled.div`
@@ -61,14 +83,14 @@ export default function Hero() {
           </div>
           <div className="container">
             <label htmlFor="">Check-in</label>
-            <input type="date" />
+            <input type="date" name="checkin" value={state.checkin} onChange={handleChange} />
           </div>
           <div className="container">
             <label htmlFor="">Check-out</label>
-            <input type="date" />
+            <input type="date" name="checkout" value={state.checkout} onChange={handleChange} />
           </div>
           
-         <Link to={"Listing"}><button > <i class="material-icons">search</i>Search</button></Link>
+         <Link to={"Listing"}><button onClick={saveData} > <i class="material-icons">search</i>Search</button></Link>
         </div>
         {
           showRes?
