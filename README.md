@@ -5,6 +5,7 @@
 2. bootstrap
 3. React Router
 4. styled component css
+5. JSON server
 
 ### This was a collaborative project completed in 5 days by:
 - [Abhishek Kasera](https://github.com/AbhishekKasera7696) 
