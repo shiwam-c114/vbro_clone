@@ -11,4 +11,4 @@
 - [Yashasvi Vij](https://github.com/yashasvij-19)
 - [Shiwam Tiwari](https://github.com/shiwam-C114)
 
-### [Deplyed Clone](https://frabjous-creponne-951603.netlify.app)
+### [Deployed Clone](https://frabjous-creponne-951603.netlify.app)
